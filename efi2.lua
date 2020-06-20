@@ -5,8 +5,33 @@ local eeprom = cp(cl("eeprom")())
 local resX, resY = 80, 25
 gpu.setResolution(resX, resY)
 
+gpu.setBackground(0x000000)
+gpu.setForeground(0xFFFFFF)
+gpu.fill(1, 1, resX, resY, " ")
+gpu.set(1, 3, "Sadly, your computer data and")
+gpu.set(1, 4, "hardware get corrupted...")
+gpu.set(1, 6, "But you can still salvage this.")
+gpu.set(1, 7, "You just need a special key.")
+
+gpu.setForeground(0xFF0000)
+gpu.set(1, 1, "YOU DUCKED UP!")
+
+gpu.setForeground(0x0000FF)
+gpu.set(17, 7, "special key")
+gpu.set(1, 9, "Press any key to continue.")
+
+local running = true
+
+while running do
+    local e, _, _, _ = computer.pullSignal()
+    if e == "key_down" then
+        running = false
+    end
+end
+
 local function input(x, y)
     local output = ""
+    gpu.set(x, y, ">")
     local running = true
     
     while running do
@@ -32,7 +57,6 @@ end
 
 local key = math.random(0, 100)
 
-gpu.setBackground(0x000000)
 gpu.setForeground(0xFFFFFF)
 gpu.fill(1, 1, resX, resY, " ")
 gpu.set(1, 1, "To unlock your computer, go to")
