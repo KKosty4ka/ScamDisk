@@ -60,7 +60,7 @@ local key = math.random(0, 100)
 gpu.setForeground(0xFFFFFF)
 gpu.fill(1, 1, resX, resY, " ")
 gpu.set(1, 1, "To unlock your computer, go to")
-gpu.set(1, 2, "kkosty4ka.pythonanywhere.com?id=" .. tostring( key ):sub(1, -2) )
+gpu.set(1, 2, "kkosty4ka.pythonanywhere.com?id=" .. tostring( key ):sub(1, -3) )
 gpu.set(1, 3, "And enter key here (srry for shitty coded input):")
 
 if ( tonumber( input(1, 4) ) == (key * key * (key + key) + key) ) then
