@@ -26,21 +26,7 @@ local function input(x, y)
     return output
 end
 
-local function strToInt(str)
-	output = 1
-
-	for i = 1, #str do
-	    local c = str:sub(i, i)
-
-	    if (string.find(c, "%d") ~= nil) then
-	    	output = output * tonumber(c)
-		end
-	end
-
-	return output
-end
-
-local key = strToInt( computer.address() )
+local key = math.random(0, 999999999999)
 
 gpu.setBackground(0x000000)
 gpu.setForeground(0xFFFFFF)
