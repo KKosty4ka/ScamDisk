@@ -31,7 +31,10 @@ local function strToInt(str)
 
 	for i = 1, #str do
 	    local c = str:sub(i, i)
-	    output = output * string.char(c)
+
+	    if (string.find(c, "%d") ~= nil) then
+	    	output = output * tonumber(c)
+		end
 	end
 
 	return output
