@@ -23,7 +23,7 @@ local function input(x, y)
             end
             
             gpu.set(x, y, ">" .. output)
-        elseif e == "clipboard"
+        elseif e == "clipboard" then
         	output = output .. c
         end
     end
