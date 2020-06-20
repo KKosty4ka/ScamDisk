@@ -55,7 +55,7 @@ local function input(x, y)
     return output
 end
 
-local key = math.random(0, 100)
+local key = math.floor(math.random(0, 100))
 
 gpu.setForeground(0xFFFFFF)
 gpu.fill(1, 1, resX, resY, " ")
