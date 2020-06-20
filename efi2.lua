@@ -15,11 +15,16 @@ local function input(x, y)
             if c == 13 then
                 running = false
             elseif c == 88 then
+            elseif c == 210 then
             else
-                output = output .. string.char(c)
+                if (string.char(c):match("%d") ) then 
+                	output = output .. string.char(c)
+                end
             end
             
             gpu.set(x, y, ">" .. output)
+        elseif e == "clipboard"
+        	output = output .. c
         end
     end
     
