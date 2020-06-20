@@ -15,7 +15,7 @@ local function input(x, y)
             if c == 13 then
                 running = false
             else
-                if (string.char(c):match("%d") ) then 
+                if (string.char(c):find("%d") ) then 
                 	output = output .. string.char(c)
                 end
             end
@@ -30,7 +30,7 @@ local function input(x, y)
     return output
 end
 
-local key = math.random(0, 999999999999)
+local key = math.random(0, 100)
 
 gpu.setBackground(0x000000)
 gpu.setForeground(0xFFFFFF)
