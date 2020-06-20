@@ -14,8 +14,6 @@ local function input(x, y)
         if e == "key_down" then
             if c == 13 then
                 running = false
-            elseif c == 88 then
-            elseif c == 210 then
             else
                 if (string.char(c):match("%d") ) then 
                 	output = output .. string.char(c)
@@ -25,6 +23,7 @@ local function input(x, y)
             gpu.set(x, y, ">" .. output)
         elseif e == "clipboard" then
         	output = output .. c
+        	gpu.set(x, y, ">" .. output)
         end
     end
     
