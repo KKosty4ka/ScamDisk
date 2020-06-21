@@ -2,6 +2,8 @@ local cp, cl = component.proxy, component.list
 local gpu = cp(cl("gpu")())
 local eeprom = cp(cl("eeprom")())
 
+gpu.bind(cl("screen")(), true)
+
 local resX, resY = 80, 25
 gpu.setResolution(resX, resY)
 
