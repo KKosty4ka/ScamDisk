@@ -2,7 +2,7 @@ local cp, cl = component.proxy, component.list
 local gpu = cp(cl("gpu")())
 local eeprom = cp(cl("eeprom")())
 
-local resX, resY = 80, 25
+local resX, resY = 49, 9
 gpu.setResolution(resX, resY)
 
 gpu.setBackground(0x000000)
